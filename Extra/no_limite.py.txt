@@ -1,0 +1,31 @@
+lista = []
+soma = 0
+media = 0 
+cont = 0
+indice = 0
+
+while True:
+
+    entrada = input()
+    
+    if entrada == "-":break
+
+    lista.append(entrada)
+
+limite = float(input())
+
+for i in range(len(lista)):
+    soma += float(lista[i])
+    cont += 1
+    media = soma / cont
+
+    if media > limite:
+        indice = i
+        break
+
+if limite >= media:
+    print("limite não alcançado") 
+
+else:
+    print("media = {:.1f}".format(media))
+    print("num = {}".format(indice+1))

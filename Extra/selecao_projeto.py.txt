@@ -1,0 +1,18 @@
+cre = float(input())
+experiencia = float(input())
+
+if cre < 7 and experiencia < 6:
+    print("Candidato eliminado. CRE e experiência abaixo do limite.")
+
+elif cre < 7:
+    print("Candidato eliminado. CRE abaixo do limite.")
+
+elif experiencia < 6:
+    print("Candidato eliminado. Experiência abaixo do limite.")
+
+elif cre >= 7 and experiencia >= 6:
+    nota = float(input())
+    if nota <=3:
+        print("Candidato classificado.")
+    else:
+        print("Candidato aprovado.")
