@@ -1,0 +1,7 @@
+def mais_velhos_final(fila):
+    indice = 0
+
+    for i in range(len(fila)-1,-1,-1):
+        if fila[i] >= 18:
+            indice -= 1
+            fila[i], fila[indice] = fila[indice], fila[i]

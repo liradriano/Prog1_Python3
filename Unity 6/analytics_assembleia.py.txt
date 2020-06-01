@@ -1,0 +1,16 @@
+def conta_votos(votacoes, id_votacao):
+    s = 0
+    n = 0
+
+    for i in votacoes:
+        i = i.split(",")
+
+        if int(i[2]) == id_votacao:
+
+            if i[1] == 'sim':
+                s += 1
+
+            else:
+                n += 1
+
+    return [s, n]

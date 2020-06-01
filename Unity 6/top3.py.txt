@@ -1,0 +1,11 @@
+def top_3(lista):
+    for i in range(len(lista)):
+        for j in range(1,len(lista)-i):
+            if lista[j] > lista[j-1]:
+                lista[j-1], lista[j] = lista[j], lista[j-1]
+    return lista
+l = [1,2,3,4,8,22,-3,5]
+print(top_3(l))
+print(len(l))
+assert l[0] == 22 and l[1] == 8 and l[2] == 5
+assert len(l) == 8
