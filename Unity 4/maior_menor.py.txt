@@ -1,0 +1,16 @@
+entrada = int(input())
+lista = []
+
+for i in range(entrada):
+    valor = int(input())
+    lista.append(valor)
+    maior = lista[0]
+    menor = lista[0]
+    for j in range(len(lista)):
+        if lista[j] > maior:
+            maior = lista[j]
+        if lista[j] < menor:
+            menor = lista[j]
+
+print(maior)
+print(menor)

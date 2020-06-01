@@ -1,0 +1,10 @@
+entrada = int(input())
+cont = 0
+
+for i in range(10):
+    n = int(input())
+
+    if n % entrada == 0:
+        cont += n
+
+print(cont)

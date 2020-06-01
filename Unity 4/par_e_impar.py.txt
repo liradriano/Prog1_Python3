@@ -1,0 +1,24 @@
+entrada = int(input())
+
+cont1 = 0
+cont2 = 0
+soma1 = 0
+soma2 = 0
+media1 = 0
+media2 = 0
+for i in range(entrada):
+    numeros = int(input())
+
+    if numeros % 2 == 0:
+        soma1 += numeros
+        cont1 += 1
+
+    else:
+        soma2 += numeros
+        cont2 += 1
+media1 = soma1 / cont1
+media2 = soma2 / cont2
+print("pares: {}".format(cont1))
+print("ímpares: {}".format(cont2))
+print("média pares: {}".format(media1))
+print("média ímpares: {}".format(media2))

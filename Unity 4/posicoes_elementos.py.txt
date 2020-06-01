@@ -1,0 +1,16 @@
+entrada = int(input())
+sequencia = input().split()
+lista = []
+
+for i in range(len(sequencia)):
+    if int(sequencia[i]) == entrada:
+        lista.append(i)
+
+if len(lista) > 0:
+    for j in range(len(lista)):
+        if j != len(lista)-1:
+            print(lista[j], end=' ')
+        else:
+            print(lista[j])
+else:
+    print("-1")
