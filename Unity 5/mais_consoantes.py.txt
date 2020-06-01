@@ -1,0 +1,16 @@
+contador = 0
+while True:
+    vogal = 0
+    consoante = 0
+    entrada = input()
+    contador += 1
+    for i in range(len(entrada)):
+        if entrada[i] in "aeiouAEIOU":
+            vogal += 1
+
+        else:
+            consoante += 1
+
+    if consoante > vogal:
+        print(contador)
+        break

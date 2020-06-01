@@ -1,0 +1,37 @@
+menor = float("inf")
+maior_t = -float("inf")
+maior_c = -float("inf")
+menor_valor = ""
+maior_tamanho = ""
+maior_conforto = ""
+
+while True:
+    registro = input()
+
+    if registro == "---":break
+
+    registro = registro.split(",")
+    
+
+    if float(registro[0]) < menor:
+        menor = float(registro[0])
+        menor_valor = registro[3]
+        
+    if float(registro[1]) > maior_t: 
+        maior_t = float(registro[1])
+        maior_tamanho = registro[3]
+
+    if float(registro[2]) > maior_c:
+        maior_c = float(registro[2])
+        maior_conforto = registro[3]
+
+while True:
+    registro = input()
+    
+    if registro == "fim":break
+    if registro == "valor":
+        print(menor_valor)
+    if registro == "tamanho":
+        print(maior_tamanho)
+    if registro == "conforto":
+        print(maior_conforto)

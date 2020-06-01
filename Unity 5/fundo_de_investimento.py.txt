@@ -1,0 +1,15 @@
+
+media = 0
+soma = 0
+resultado = 0
+
+while True:
+
+    entrada = float(input())
+    if entrada < resultado:break
+    soma += entrada
+    media +=1
+    resultado = soma/ media
+
+print("Saldo total do FIS: R${:.2f}.".format(soma))
+print("Média das contribuições: R${:.2f}.".format(resultado))

@@ -1,0 +1,26 @@
+cont = 0
+nomes = []
+soma1 = []
+
+while True:
+    nome = input()
+    nomes.append(nome)
+    soma = 0  
+    
+    if nome == "**":break 
+
+    while True:
+        
+        entrada = input()
+    
+        if entrada == "*":break
+
+        soma += int(entrada)
+        cont += int(entrada)
+    soma1.append(soma)
+
+print("Relatório de novas questões:\n")
+for i in range(len(soma1)):
+    print("%s: %d" %(nomes[i], soma1[i]))
+print("---")
+print("Total de novas questões: %d" %cont)

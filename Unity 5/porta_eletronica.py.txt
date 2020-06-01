@@ -1,0 +1,17 @@
+
+lista = []
+
+while True:
+    cont = 0
+    entrada = input()
+
+    if entrada == "S": 
+        break
+    if entrada[0] == "R":
+        lista.append(entrada)
+    elif entrada[0] == "P":
+        for i in lista:
+            if i[2] == entrada[2]:
+                cont += 1
+	cont = 0
+        print(cont)

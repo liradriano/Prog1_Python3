@@ -1,0 +1,27 @@
+cont = 0
+limite_saque = int(input())
+saldo = float(input())
+
+while True:
+    operacao, dinheiro = input().split()
+    if operacao == "saque":
+        if cont == limite_saque:
+            print("Operação inválida: saque {:.2f}.".format(float(dinheiro)))
+            print("Seu saldo é R$ {:.2f}.".format(float(saldo)))
+            break
+        elif float(dinheiro) > saldo:
+            print("Operação inválida: saque {:.2f}.".format(float(dinheiro)))
+            print("Seu saldo é R$ {:.2f}.".format(float(saldo)))
+            break
+        else:
+            saldo -= float(dinheiro)
+
+        cont += 1
+
+    if operacao == "depósito":
+        if float(dinheiro) > 1000.00:
+            print("Operação inválida: depósito {:.2f}.".format(float(dinheiro)))
+            print("Seu saldo é R$ {:.2f}.".format(float(saldo)))
+            break
+        else:
+            saldo += float(dinheiro)

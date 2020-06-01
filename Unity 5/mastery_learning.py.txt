@@ -1,0 +1,56 @@
+print('Mastery Learning')
+print('Cálculo da nota na unidade')
+print( ) 
+n1 = float(input('Nota? '))
+n2 = float(input('Nota? '))
+contador = 0
+mediainicial = (n1 + n2) /2
+
+if n1 < 5 or n2 < 5:
+    print('Média: {:.1f} (cursando)'.format((n1 + n2) / 2))
+    print('Penalização: {:.1f}'.format(contador))
+
+while n1 < 5:
+    print( )
+    n1 = float(input('Nota? '))
+    media = (n1 + n2) / 2
+
+    if media > mediainicial:
+        media = media
+
+    elif media < mediainicial:
+        media = mediainicial
+    contador += 0.5
+
+    if n1 >= 5: break
+    print('Média: {:.1f} (cursando)'.format(media))
+    print('Penalização: {:.1f}'.format(contador))
+
+while n2 < 5:
+    print( )
+    n2 = float(input('Nota? '))
+    contador += 0.5
+    media = (n1 + n2) / 2
+
+    if media > mediainicial:
+        media = media
+
+    elif media < mediainicial:
+        media = mediainicial
+
+    if n2 >= 5: break
+    print('Média: {:.1f} (cursando)'.format(((n1 + n2) / 2)))
+    print('Penalização: {:.1f}'.format(contador))
+
+medianotas = (n1 + n2) / 2
+
+if medianotas >= 5:
+    print('Média: {:.1f} (aprovado)'.format(medianotas))
+    print('Penalização: {:.1f}'.format(contador))
+
+print( )
+print('===')
+print('Notas válidas: {:.1f} e {:.1f}'.format(n1, n2))
+print('Média parcial na unidade: {:.1f}'.format(medianotas))
+print('Penalizações: {:.1f}'.format(contador))
+print('Média final na unidade: {:.1f}'.format(medianotas - contador))

@@ -1,0 +1,13 @@
+flag = False
+entrada = input().split()
+
+while True:
+    for i in range(len(entrada)-1):
+        if int(entrada[i]) % 2 == 0:
+            if int(entrada[i+1]) % 2 != 0:
+                    flag = True
+    break
+if flag == True :
+    print("erro")
+else:
+    print("ok")

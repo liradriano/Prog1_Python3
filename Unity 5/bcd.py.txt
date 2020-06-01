@@ -1,0 +1,29 @@
+  
+while True:
+    valor1 = ''
+    valor2 = '' 
+    entrada = input()
+    resultado = 0
+
+    if entrada == "fim":break
+
+    if len(entrada) < 8:
+        print("Tente novamente.")
+
+    else:
+        for i in range((len(entrada)//2)):
+            valor1 += entrada[i]
+
+        for e in range((len(entrada)//2),len(entrada)):
+            valor2 += entrada[e]
+
+        resultado = str(int(valor1,2)) + str(int(valor2,2))
+
+        if int(valor1,2) > 9:
+            print("BCD inválido.")
+
+        elif int(valor2,2) > 9:
+            print("BCD inválido.")
+
+        else:
+            print(resultado)

@@ -1,0 +1,22 @@
+limite = int(input())
+
+while True:
+    soma = 0
+    valores = input()
+
+    if valores != "-":
+
+        valores = valores.split()
+
+        for i in valores:
+            soma += int(i)
+
+        if soma >= limite:
+            for i in range(len(valores)-1):
+                print("{} + ".format(valores[i]), end = "")
+            print("{} = {}".format(valores[-1],soma))
+        
+        if soma > (5*limite):
+            break
+
+    if valores == "-":break
